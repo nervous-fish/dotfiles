@@ -1,0 +1,3 @@
+theme = noctalia
+
+keybind = global:ctrl+t=toggle_quick_terminal
