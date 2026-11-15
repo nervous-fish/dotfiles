@@ -138,7 +138,7 @@ screen_time_enabled = true
 builtin = "Dracula"
 
     [theme.templates]
-    builtin_ids = [ "ghostty", "niri" ]
+    builtin_ids = [ "gtk3", "gtk4", "ghostty", "niri" ]
 
 [wallpaper]
 directory = "/home/nervousfish/Pictures/waifullpapers"
