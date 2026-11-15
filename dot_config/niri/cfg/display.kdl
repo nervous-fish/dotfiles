@@ -7,3 +7,10 @@
     mode "2560x1440@359.979" // Set resolution and refresh rate
     scale 1 // No scaling (use 2 for HiDPI)
 }
+
+output "DP-1" {
+    mode "5120x1440@199.992"
+    scale 1
+    // VRR only for windows that ask for it (the game rule in rules.kdl); the desktop stays at a fixed 200 Hz.
+    variable-refresh-rate on-demand=true
+}

@@ -50,6 +50,8 @@ binds {
     Mod+CTRL+H                          { move-column-left; }
     Mod+CTRL+Right                      { move-column-right; }
     Mod+CTRL+L                          { move-column-right; }
+    Mod+Shift+H                         { spawn "/home/nervousfish/.config/niri/scripts/join-column.sh" "left"; }
+    Mod+Shift+L                         { spawn "/home/nervousfish/.config/niri/scripts/join-column.sh" "right"; }
     Mod+CTRL+UP                         { move-window-up; }
     Mod+CTRL+K                          { move-window-up; }
     Mod+CTRL+Down                       { move-window-down; }
@@ -119,7 +121,9 @@ binds {
     Mod+R				                        { switch-preset-column-width; }
 
     // ─── Modes ───
-    Mod+T                               { toggle-window-floating; }
+    Mod+T                               { spawn "/home/nervousfish/.config/niri/scripts/toggle-float.sh"; }
+    Mod+M                               { spawn "/home/nervousfish/.config/niri/scripts/realign-view.sh" "maximize-column"; }
+    Mod+Shift+F                         { toggle-windowed-fullscreen; }
     Mod+F                               { fullscreen-window; }
     Mod+W                               { toggle-column-tabbed-display; }
 

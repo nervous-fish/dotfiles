@@ -70,7 +70,7 @@
             "id": "pipewire-screen-capture-source",
             "versioned_id": "pipewire-screen-capture-source",
             "settings": {
-                "RestoreToken": "69433def-befd-44a1-a655-4f0069363e57"
+                "RestoreToken": "w2M37m9jDYVMmQVxHxJvmw"
             },
             "mixers": 0,
             "sync": 0,
@@ -220,9 +220,6 @@
     "scaling_level": -13,
     "scaling_off_x": 0.0,
     "scaling_off_y": 0.0,
-    "virtual-camera": {
-        "type2": 3
-    },
     "modules": {
         "scripts-tool": [],
         "output-timer": {
@@ -236,6 +233,10 @@
             "autoStartRecordTimer": false,
             "pauseRecordTimer": true
         }
+    },
+    "resolution": {
+        "x": 5120,
+        "y": 1440
     },
     "version": 2
 }

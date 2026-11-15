@@ -11,8 +11,38 @@
     }
 
     window-rule {
+        match app-id="steam" title=r#"^[Ss]team$"#
+        open-floating true
+        default-column-width { fixed 1920; }
+        default-window-height { fixed 1080; }
+    }
+
+    window-rule {
        match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
        default-floating-position x=10 y=10 relative-to="bottom-right"
+       open-focused false
+    }
+    
+    window-rule {
+        match app-id="Ankama Launcher" 
+        exclude title=r#"^Ankama Launcher$"#
+        open-floating true
+    }
+
+    window-rule {
+        match app-id="Ankama Launcher" title=r#"^Ankama Launcher$"#
+        open-floating true
+        default-column-width { fixed 1920; }
+        default-window-height { fixed 1080; }
+    }
+
+    window-rule {
+       match app-id="Ankama Launcher" title=r#"^Notification"#
+       default-floating-position x=10 y=10 relative-to="bottom-right"
+       min-width 400
+       max-width 400
+       min-height 120
+       max-height 120
        open-focused false
     }
 
@@ -28,7 +58,7 @@
         match app-id=r#"^io\.mpv$"#
         match app-id=r#"^(vlc|org\.videolan\.VLC)$"#
         match app-id=r#"^io\.github\.celluloid_player\.Celluloid$"#
-        match app-id=r#"^com\.stremio\.stremio$"#
+        match app-id=r#"^dev\.aunetx\.deezer$"#
         open-floating true
         default-column-width { fixed 1920; }
         default-window-height { fixed 1080; }
@@ -37,6 +67,22 @@
     window-rule {
       match app-id=r#"^dev\.zed\.Zed$"#
       open-floating false
+      default-column-width { proportion 0.5; }
+    }
+
+    window-rule {
+      match app-id=r#"^com\.stremio\.stremio$"#
+      open-maximized true
+    }
+
+    window-rule {
+      match app-id=r#"^firefox$"#
+      default-column-width { proportion 0.5; }
+    }
+
+    window-rule {
+      match app-id=r#"^com\.mitchellh\.ghostty$"#
+      default-column-width { proportion 0.25; }
     }
 
     window-rule {
@@ -50,7 +96,27 @@
       open-floating true
     }
 
+    window-rule {
+      match app-id=r#"^heroic$"#
+      open-floating true
+      default-column-width { fixed 1920; }
+      default-window-height { fixed 1080; }
+    }
+    window-rule {
+      match app-id=r#"^discord$"#
+      default-column-width { proportion 0.25; }
+    }
+
     layer-rule {
         match namespace="^noctalia-wallpaper*"
         place-within-backdrop true
+    }
+
+    // Games: Proton/Steam games, gamescope, emulators. Turns VRR on while they're on screen.
+    window-rule {
+      match app-id=r#"^steam_app_"#
+      match app-id=r#"^gamescope$"#
+      match app-id=r#"(?i)retroarch"#
+      match app-id=r#"(?i)(pcsx2|rpcs3|ryujinx|ryubing|shadps4|dolphin)"#
+      variable-refresh-rate true
     }

@@ -4,8 +4,9 @@
 input {
     keyboard {
         xkb {
-            layout "fr" // Use the American keyboard layout
-	    variant "ergol"
+            layout "fr,us"
+	    variant "ergol,"
+            options "grp:alt_shift_toggle"
         }
         numlock // Enable numlock on startup
     }

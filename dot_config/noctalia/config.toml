@@ -1,7 +1,6 @@
-# Ported from Noctalia v4 (~/.config/noctalia/settings.json) to v5 TOML config.
-# v5 has no automatic migration path (confirmed in docs.noctalia.dev) - this is
-# a manual best-effort port of the settings that have a clear v5 equivalent.
-# Fields with no v5 equivalent (see chat summary) were intentionally left out.
+# Declarative Noctalia v5 config: only settings the GUI does not hold.
+# The settings GUI (~/.local/state/noctalia/settings.toml) is the source of truth
+# for everything else, including the bar layout and widgets.
 
 [theme]
 source = "wallpaper"
@@ -34,32 +33,12 @@ position = "top_right"
 [lockscreen]
 fingerprint = false
 
-[accessibility]
-ui_scale = 1.05
-
-[backdrop]
-enabled = true
-
 [shell]
 avatar_path = "/home/nervousfish/Pictures/ER/130.jpg"
 
 [bar.default]
-position = "left"
+# GUI holds the rest of the bar; only the center list comes from here.
 center = [ "workspaces" ]
-start = [ "launcher", "keyboard_layout", "clock", "sysmon_cpu_usage", "sysmon_cpu_temp", "sysmon_ram_used", "sysmon_disk_free", "active_window", "media" ]
-end = [ "tray", "notifications", "battery", "volume", "brightness", "control-center" ]
-
-[widget.clock]
-type = "clock"
-format = "%H:%M %a, %b %d"
-vertical_format = "%H %M - %d %m"
-tooltip_format = "%H:%M %a, %b %d"
-
-[widget.active_window]
-type = "active_window"
-max_length = 145.0
-title_scroll = "on_hover"
-display = "icon_and_text"
 
 [widget.media]
 type = "media"
@@ -74,19 +53,3 @@ max_label_chars = 2
 focused_color = "primary"
 occupied_color = "secondary"
 empty_color = "secondary"
-
-[widget.sysmon_cpu_usage]
-type = "sysmon"
-stat = "cpu_usage"
-
-[widget.sysmon_cpu_temp]
-type = "sysmon"
-stat = "cpu_temp"
-
-[widget.sysmon_ram_used]
-type = "sysmon"
-stat = "ram_used"
-
-[widget.sysmon_disk_free]
-type = "sysmon"
-stat = "disk_free"
