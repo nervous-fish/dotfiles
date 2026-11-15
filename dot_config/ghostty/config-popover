@@ -1,0 +1,5 @@
+# Local popover config: plugin defaults + personal overrides.
+config-file = /home/nervousfish/source/producing/noctalia-terminal-popover/ghostty/config-popover
+
+# Start opencode in the first tab; new tabs (ctrl+shift+t) stay a fish shell.
+initial-command = opencode

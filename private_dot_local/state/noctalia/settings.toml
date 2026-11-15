@@ -1,0 +1,180 @@
+config_version = 15
+
+[accessibility]
+ui_scale = 1.0000000074505806
+
+[backdrop]
+blur_intensity = 0.0
+enabled = false
+
+[bar.default]
+background_opacity = 0.89999997988343239
+capsule = true
+end = [ "tray", "notifications", "volume", "control-center", "widget" ]
+margin_ends = 0
+padding = 2
+position = "left"
+radius_bottom_left = 0
+radius_top_left = 0
+scale = 1.2500000111758709
+start = [ "widget_2", "keyboard_layout", "media" ]
+thickness = 42
+
+[idle]
+behavior_order = [ "screen-off", "lock", "lock-and-suspend" ]
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = false
+    timeout = 600.0
+
+    [idle.behavior.lock-and-suspend]
+    action = "lock_and_suspend"
+    enabled = false
+    timeout = 900.0
+
+    [idle.behavior.screen-off]
+    action = "screen_off"
+    enabled = false
+    timeout = 300.0
+
+[lockscreen_widgets]
+enabled = false
+schema_version = 2
+widget_order = [ "lockscreen-login-box@DP-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@DP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 2560.0
+    cy = 1258.0
+    output = "DP-1"
+    placement_height = 1440.0
+    placement_width = 5120.0
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@DP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+[plugin_settings."alexander/screen-toolkit"]
+record-copy-to-clipboard = true
+
+[plugin_settings."noctalia/wallhaven"]
+download_dir = "/home/nervousfish/Pictures/waifullpapers"
+
+[plugins]
+auto_update = "none"
+enabled = [ "alexander/screen-toolkit", "yuuto/arch-updater", "kenn/keybind-cheatsheet" ]
+
+[shell]
+polkit_agent = true
+screen_time_enabled = true
+
+    [shell.launcher]
+    app_grid = true
+    compact = true
+
+    [shell.panel]
+    launcher_position = "bottom_center"
+    open_near_click_control_center = true
+    open_near_click_session = true
+    open_near_click_wallpaper = true
+
+    [[shell.session.actions]]
+    action = "lock"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "1"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "logout"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "2"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "lock_and_suspend"
+    countdown_seconds = 0.0
+    enabled = false
+    shortcut = "3"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "reboot"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "4"
+    variant = "default"
+
+    [[shell.session.actions]]
+    action = "shutdown"
+    countdown_seconds = 0.0
+    enabled = true
+    shortcut = "5"
+    variant = "destructive"
+
+[theme]
+builtin = "Dracula"
+
+    [theme.templates]
+    builtin_ids = [ "ghostty", "niri" ]
+
+[wallpaper]
+directory = "/home/nervousfish/Pictures/waifullpapers"
+fill_mode = "center"
+
+    [wallpaper.default]
+    path = "/home/nervousfish/Pictures/waifullpapers/initial-d-trueno-anime-police-girl-8k-eg(1).jpg"
+
+    [wallpaper.last]
+    path = "/home/nervousfish/Pictures/waifullpapers/initial-d-trueno-anime-police-girl-8k-eg(1).jpg"
+
+    [wallpaper.monitors.DP-1]
+    path = "/home/nervousfish/Pictures/waifullpapers/initial-d-trueno-anime-police-girl-8k-eg(1).jpg"
+
+[widget.keyboard_layout]
+font_weight = 100
+
+[widget.launcher]
+glyph = "rocket"
+
+[widget.sysmon]
+label_show_units = false
+show_value = false
+stat = "cpu_temp"
+
+[widget.volume]
+show_label = false
+
+[widget.weather]
+show_temperature = false
+
+[widget.widget]
+type = "alexander/screen-toolkit:widget"
+
+[widget.widget_2]
+type = "yuuto/arch-updater:widget"
+
+[widget.workspaces]
+style = "focus_hint"
