@@ -1,0 +1,6 @@
+// ────────────── Startup Applications ──────────────
+// https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#spawn-at-startup
+// Ported from autostart.kdl for noctalia v5: v5 is a native binary, no more
+// quickshell (qs -c noctalia-shell) wrapper needed.
+
+    spawn-at-startup "noctalia"

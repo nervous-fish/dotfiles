@@ -1,0 +1,92 @@
+# Ported from Noctalia v4 (~/.config/noctalia/settings.json) to v5 TOML config.
+# v5 has no automatic migration path (confirmed in docs.noctalia.dev) - this is
+# a manual best-effort port of the settings that have a clear v5 equivalent.
+# Fields with no v5 equivalent (see chat summary) were intentionally left out.
+
+[theme]
+source = "wallpaper"
+wallpaper_scheme = "m3-tonal-spot"
+mode = "dark"
+pure_black_dark = false
+
+[wallpaper]
+transition = [ "fade", "disc", "stripes", "wipe", "honeycomb" ]
+edge_smoothness = 0.05
+
+    [wallpaper.automation]
+    interval_seconds = 300
+    order = "random"
+
+[location]
+auto_locate = false
+address = "Nantes"
+custom_schedule = false
+
+[nightlight]
+enabled = true
+force = false
+temperature_day = 6500
+temperature_night = 2502
+
+[osd]
+position = "top_right"
+
+[lockscreen]
+fingerprint = false
+
+[accessibility]
+ui_scale = 1.05
+
+[backdrop]
+enabled = true
+
+[shell]
+avatar_path = "/home/nervousfish/Pictures/ER/130.jpg"
+
+[bar.default]
+position = "left"
+center = [ "workspaces" ]
+start = [ "launcher", "keyboard_layout", "clock", "sysmon_cpu_usage", "sysmon_cpu_temp", "sysmon_ram_used", "sysmon_disk_free", "active_window", "media" ]
+end = [ "tray", "notifications", "battery", "volume", "brightness", "control-center" ]
+
+[widget.clock]
+type = "clock"
+format = "%H:%M %a, %b %d"
+vertical_format = "%H %M - %d %m"
+tooltip_format = "%H:%M %a, %b %d"
+
+[widget.active_window]
+type = "active_window"
+max_length = 145.0
+title_scroll = "on_hover"
+display = "icon_and_text"
+
+[widget.media]
+type = "media"
+max_length = 145.0
+title_scroll = "on_hover"
+
+[widget.workspaces]
+type = "workspaces"
+hide_when_empty = false
+labels_only_when_occupied = true
+max_label_chars = 2
+focused_color = "primary"
+occupied_color = "secondary"
+empty_color = "secondary"
+
+[widget.sysmon_cpu_usage]
+type = "sysmon"
+stat = "cpu_usage"
+
+[widget.sysmon_cpu_temp]
+type = "sysmon"
+stat = "cpu_temp"
+
+[widget.sysmon_ram_used]
+type = "sysmon"
+stat = "ram_used"
+
+[widget.sysmon_disk_free]
+type = "sysmon"
+stat = "disk_free"
