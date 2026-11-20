@@ -75,6 +75,9 @@ widget_order = [ "lockscreen-login-box@DP-1" ]
         show_unlock_hint = true
         show_weather = true
 
+[nightlight]
+enabled = false
+
 [plugin_settings."alexander/screen-toolkit"]
 record-copy-to-clipboard = true
 
